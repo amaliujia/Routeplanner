@@ -4,6 +4,7 @@ import Interface.RoutePlanner;
 
 import java.io.File;
 import java.io.FileNotFoundException;
+import java.io.IOException;
 import java.util.Scanner;
 
 /**
@@ -18,7 +19,11 @@ public class main {
     public static void main(String args[]){
         PittsburghRoutePlannerBuilder builder = new PittsburghRoutePlannerBuilder();
 
-        RoutePlanner routePlanner = builder.build(path, 1200);
+        try {
+            RoutePlanner routePlanner = builder.build(path, 1200);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
 
 

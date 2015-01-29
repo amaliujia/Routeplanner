@@ -17,5 +17,12 @@ public class PittsburghRoutePlannerBuilder implements RoutePlannerBuilder {
         RoutePlanner routePlanner = new PittsburghRoutePlanner();
 
         Scanner scanner = new Scanner(new File(filename));
+
+        String line = "";
+        while (scanner.hasNext()){
+            line = scanner.nextLine();
+        }
+
+        return routePlanner;
     }
 }

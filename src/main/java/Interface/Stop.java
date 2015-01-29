@@ -1,5 +1,7 @@
 package Interface;
 
+import java.util.Comparator;
+
 /**
  * Created by amaliujia on 15-1-28.
  */
